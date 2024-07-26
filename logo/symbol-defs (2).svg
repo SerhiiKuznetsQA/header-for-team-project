@@ -1,0 +1,17 @@
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="icon-Glass-effect-1" viewBox="0 0 15 32">
+      <path d="M-1.419 0H.225v32h-1.644V0z"/>
+      <path d="M.029 0h1.644v32H.029V0z"/>
+      <path d="M1.476 0H3.12v32H1.476V0z"/>
+      <path d="M2.923 0h1.644v32H2.923V0z"/>
+      <path d="M4.371 0h1.644v32H4.371V0z"/>
+      <path d="M5.818 0h1.644v32H5.818V0z"/>
+      <path d="M7.266 0H8.91v32H7.266V0z"/>
+      <path d="M8.713 0h1.644v32H8.713V0z"/>
+      <path d="M10.16 0h1.644v32H10.16V0z"/>
+      <path d="M11.608 0h1.644v32h-1.644V0z"/>
+      <path d="M13.055 0h1.644v32h-1.644V0z"/>
+    </symbol>
+  </defs>
+</svg>

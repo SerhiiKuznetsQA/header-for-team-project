@@ -10,6 +10,10 @@ body {
     background-color: #8e8d8d;
     line-height: 1.6;
 }
+.body-no-scroll {
+    overflow: hidden;
+}
+
 
 ul,
 ol {
@@ -54,6 +58,7 @@ p {
 }
 
 
+
 .header {
     position: absolute;
     top:32px;
@@ -61,6 +66,7 @@ p {
     right: 16px;
     display: flex;
     justify-content: space-between;
+    
 }
 .header.active {
     padding: 32px;
@@ -74,8 +80,12 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(-90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url(./logo/Glass\ effect\ 1\ \(4\).png);
     width: 100%;
+    max-width: 817px;
     height: 100%;
     padding: 16px 32px;
     z-index: 99999;
@@ -88,12 +98,14 @@ p {
     pointer-events: none;
     transition: opacity .25s cubic-bezier(.4, 0, .2, 1), visibility .25s cubic-bezier(.4, 0, .2, 1);
 }
+
 .nav-wraper.active {
     z-index: 0;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
+
 
 
 .logo {
@@ -179,7 +191,11 @@ p {
 }
 
 @media screen and (min-width: 768px){
+    .header.header.active{
+        
+    }
     .hamburger{
+
         display: none;
     }
 
@@ -215,6 +231,8 @@ p {
         padding: 0;
         pointer-events: auto ;
         /* display: block; */
+        max-width: 100%;
+                margin-left: auto;
         
     }
 
@@ -240,6 +258,14 @@ p {
 box-shadow: 0 0 0 1px rgba(251, 251, 251, .4);
     background-color:transparent;
 }
+
+/* .nav{
+    position: absolute;
+    top:0 ;
+    left: 50%;
+    right: 50%;
+
+} */
 
 
 
