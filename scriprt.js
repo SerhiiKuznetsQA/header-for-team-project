@@ -59,7 +59,7 @@ hamburger.addEventListener("click", function () {
 // });
 menuTablet.addEventListener("click", function (evt) {
   navBar.classList.toggle("active");
-  hamburger.classList.toggle("active");
+//   hamburger.classList.toggle("active");
 
   if (navBar.classList.contains("active")) {
     console.log("Opening menu");
