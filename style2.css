@@ -109,6 +109,7 @@ p {
             background-color: #ED3B44;
             color: #FAFAFA;
             margin-bottom: 32px;
+            cursor: pointer;
 }
 
 .hamburger {
@@ -185,7 +186,6 @@ p {
                 text-align: center;
                 background-color: transparent;
                 color: #FAFAFA;
-         
                 cursor: pointer;
                 margin-bottom: 8px;
     }
@@ -201,9 +201,11 @@ p {
         flex-direction: row;
         position:static;
         padding: 0;
+        pointer-events: auto ;
         /* display: block; */
         
     }
+
     .order-project-btn{
       
         margin: 0;
@@ -219,8 +221,10 @@ p {
            .nav-list{
             visibility: hidden;
             opacity: 0;
-            pointer-events: none;
+            pointer-events:auto;
            }
+
+
 
 
 

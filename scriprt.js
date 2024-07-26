@@ -6,8 +6,12 @@ const navLinks = document.querySelectorAll(".js-nav-link");
 const navList = document.querySelector(".nav-list");
 
 
-
-
+// console.log(navBar);
+// console.log(header);
+// console.log(hamburger)
+// console.log(menuTablet);
+// console.log(navLinks);
+// console.log(navList);
 
 
 window.addEventListener("click", handlerCloseTabletMenu);
@@ -28,23 +32,44 @@ window.addEventListener("scroll" ,()=> {
 
   // При клике на бургер-меню
 hamburger.addEventListener("click", function () {
-    navBar.classList.toggle("active");
+    
      console.log("test");
     // Добавляем или удаляем класс active для бургер-меню
     hamburger.classList.toggle("active");
     // Добавляем или удаляем класс active для навигационного меню
-    
+    navBar.classList.toggle("active");
   });
 
 
 
 
 // Добавляем и удаляем  класс по клику на меню на планшете
-menuTablet.addEventListener("click", function () {
-     console.log("test");
-    navBar.classList.toggle("active");
-    hamburger.classList.toggle("active");
+// menuTablet.addEventListener("click", function (evt) {
+//              navBar.classList.toggle("active");
+//              hamburger.classList.toggle("active");
+//      console.log(evt.target);
+   
+//     if (navBar.classList.contains('active')) {
+//         console.log("test");
+//         navList.style.visibility = "visible";
+//         navList.style.opacity = 1;
+        
+//     }
   
+// });
+menuTablet.addEventListener("click", function (evt) {
+  navBar.classList.toggle("active");
+  hamburger.classList.toggle("active");
+
+  if (navBar.classList.contains("active")) {
+    console.log("Opening menu");
+    navList.style.visibility = "visible";
+    navList.style.opacity = "1";
+  } else {
+    console.log("Closing menu");
+    navList.style.visibility = "hidden";
+    navList.style.opacity = "0";
+  }
 });
 
 // Удаляем класс если клик был по ссылке 
@@ -75,6 +100,11 @@ function handlerCloseTabletMenu(evt) {
   }
 }
 
+
+
+
+
+ 
 
 
 
