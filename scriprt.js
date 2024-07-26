@@ -18,6 +18,8 @@ window.addEventListener("click", handlerCloseTabletMenu);
 window.addEventListener("scroll" ,()=> {
       if (window.scrollY > 0) {
           header.classList.add("active");
+                   navList.style.visibility = "hidden";
+                   navList.style.opacity = "0";
           console.log(
               "test"
           );
@@ -81,8 +83,11 @@ navLinks.forEach(element => element.addEventListener('click', (evt) => {
     console.log(targetId, targetSection);
     if (targetSection) { 
         targetSection.scrollIntoView({ block: "center", behavior: "smooth" });
+
     }
     navBar.classList.remove("active")
+    hamburger.classList.remove("active")
+
      console.log("test");
 }));
 
@@ -95,6 +100,8 @@ function handlerCloseTabletMenu(evt) {
   if (!navBar.contains(evt.target) && !hamburger.contains(evt.target)) {
     if (navBar.classList.contains("active")) {
         navBar.classList.remove("active");
+            navList.style.visibility = "hidden";
+            navList.style.opacity = "0";
          console.log("test");
     }
   }
