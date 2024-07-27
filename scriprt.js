@@ -4,14 +4,9 @@ const hamburger = document.querySelector(".hamburger");
 const menuTablet = document.querySelector(".menu-tablet");
 const navLinks = document.querySelectorAll(".js-nav-link");
 const navList = document.querySelector(".nav-list");
+const nav = document.querySelector(".nav")
 const btnOrder = document.querySelector(".order-project-btn");
 const body = document.body
-// console.log(navBar);
-// console.log(header);
-// console.log(hamburger)
-// console.log(menuTablet);
-// console.log(navLinks);
-// console.log(navList);
 
 window.addEventListener("click", handlerCloseTabletMenu);
 window.addEventListener("scroll", (evt) => {
@@ -19,12 +14,18 @@ window.addEventListener("scroll", (evt) => {
   if (window.scrollY >0 ) {
       header.classList.add("active");
       btnOrder.classList.add('active')
+      nav.style.height = "80px"
+      nav.style.paddingTop = "14px"
+      btnOrder.style.marginBottom = "initial"
               navList.style.visibility = "hidden";
-              navList.style.opacity = "0";
+      navList.style.opacity = "0";
+      menuTablet
   } else {
       header.classList.remove("active");
       btnOrder.classList.remove("active");
       console.log("test");
+      btnOrder.style.marginBottom = "auto"
+      nav.style.paddingTop = "10px";
 
     }
 
@@ -45,7 +46,7 @@ hamburger.addEventListener("click", function () {
                       navList.style.visibility = "visible";
                       navList.style.opacity = "1";
     }else{ 
-body.classList.toggle("body-no-scroll");
+    body.classList.toggle("body-no-scroll");
     }
   // Добавляем или удаляем класс active для навигационного меню
     navBar.classList.toggle("active");
